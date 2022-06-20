@@ -37,13 +37,17 @@
 </template>
 
 <script>
-    import { reactive, ref } from 'vue'
+    import { onMounted, reactive, ref } from 'vue'
     import { useRouter } from 'vue-router'
     import axios from 'axios'
 
     export default {
 
         setup() {
+            //mounted properti
+            onMounted(() =>{
+              document.title = "Login";
+            })
 
             //inisialisasi vue router on Composition API
             const router = useRouter()

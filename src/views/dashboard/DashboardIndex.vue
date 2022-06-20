@@ -36,6 +36,7 @@ import axios from 'axios'
     export default {
 
         setup() {
+          
 
             //state token
             const token = localStorage.getItem('token')
@@ -48,7 +49,7 @@ import axios from 'axios'
             
             //mounted properti
             onMounted(() =>{
-
+                document.title = "Dashboard";
                 //check Token exist
                 if(!token) {
                     return router.push({
